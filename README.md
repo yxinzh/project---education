@@ -4,19 +4,22 @@
 
 https://www.kaggle.com/c/kdd-cup-2014-predicting-excitement-at-donors-choose/data
 
-## Data Preprocessing
+## Data Processing
 
 dataprocessing.ipynb
+dataprocessing.py (for easy import into other notebooks)
+
+## EDA
+
+eda.ipynb
 
 ## Gaussian Naive Bayes
 
-1. Run **dataprocessing.ipynb** to get file **data.csv**
-2. Run **bayes.ipynb** with **data.csv**
+bayes.ipynb (uses processed datasets from dataprocessing.py)
 
 ## XGBoost
 
-1. Run **dataprocessing.ipynb** to get file **data.csv**
-2. Run **xgboost.ipynb** with **data.csv**
+xgboost.ipynb (uses processed datasets from dataprocessing.py)
 
 ## Random Forest
 
