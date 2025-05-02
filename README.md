@@ -6,8 +6,7 @@ https://www.kaggle.com/c/kdd-cup-2014-predicting-excitement-at-donors-choose/dat
 
 ## Data Processing
 
-dataprocessing.ipynb
-dataprocessing.py (for easy import into other notebooks)
+dataprocessing.ipynb, dataprocessing.py (for easy import into other notebooks)
 
 ## EDA
 
