@@ -56,15 +56,9 @@ data['school_state_region'] = data['school_state'].map(state_to_region)
 binary_map = {'f':0,'t':1}
 data['fully_funded'] = data['fully_funded'].map(binary_map)
 
-# columns_binary = ['school_magnet','school_nlns',
-#            'school_kipp','school_charter','school_charter_ready_promise','teacher_teach_for_america',
-#            'teacher_ny_teaching_fellow','eligible_double_your_impact_match',
-#            'eligible_almost_home_match','fully_funded']
+#capitalize states
 
-# binary_map = {'f':0,'t':1}
-
-# for col in columns_binary:
-#     data.loc[:,col] = data[col].map(binary_map)
+data['school_state'] = data['school_state'].str.upper()
 
 #Sort ascending chronologically
 
@@ -85,9 +79,9 @@ data_noutliers = data_noutliers[data_noutliers['students_reached'] > 0.0]
 data_noutliers['students_reached_scaled'] = scaler.fit_transform(data_noutliers.loc[:,['students_reached']])
 
 
-q = data['total_price_excluding_optional_support'].quantile(0.95)
+q = data_noutliers['total_price_excluding_optional_support'].quantile(0.95)
 
-data_noutliers = data[data['total_price_excluding_optional_support'] < q]
+data_noutliers = data_noutliers[data_noutliers['total_price_excluding_optional_support'] < q]
 data_noutliers = data_noutliers[data_noutliers['total_price_excluding_optional_support'] > 0.0]
 
 data_noutliers['total_price_excluding_optional_support_scaled'] = scaler.fit_transform(data_noutliers.loc[:,['total_price_excluding_optional_support']])
