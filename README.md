@@ -22,7 +22,11 @@ xgboost.ipynb (uses processed datasets from dataprocessing.py)
 
 ## Random Forest
 
+feature_dt_rf.ipynb
+
 ## Decision Tree
+
+feature_dt_rf.ipynb
 
 ## NLP
 We applied topic modeling using **Latent Dirichlet Allocation (LDA)** to extract underlying themes from the essay texts submitted by teachers. 
